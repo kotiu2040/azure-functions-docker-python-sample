@@ -30,27 +30,6 @@ stages:
       vmImage: $(vmImageName)
 
     steps:
-    - task: UseDotNet@2
-      displayName: 'Use .NET Core SDK 3.x'
-      inputs:
-        packageType: 'sdk'
-        version: '3.x'
-      condition: exists('extensions.csproj')
-
-    - task: DotNetCoreCLI@2
-      displayName: 'DotNet Core Restore'
-      inputs:
-        command: 'restore'
-        projects: '**/*.csproj'
-      condition: exists('extensions.csproj')
-
-    - task: DotNetCoreCLI@2
-      displayName: 'DotNet Core Build'
-      inputs:
-        projects: '**/*.csproj'
-        arguments: '--runtime ubuntu.16.04-x64 --output ./bin'
-        zipAfterPublish: true
-      condition: exists('extensions.csproj')
 
     - task: UsePythonVersion@0
       displayName: 'Use Python 3.x'
