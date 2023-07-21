@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '3c0cb93e-fd60-426e-b2f7-58cc59265610'
+  azureSubscription: 'Koti_Paid'
 
   # Function app name
   functionAppName: 'kotitestapp'
