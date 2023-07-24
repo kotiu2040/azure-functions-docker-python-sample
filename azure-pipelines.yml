@@ -32,9 +32,6 @@ stages:
     steps:
 
     - task: UsePythonVersion@0
-      displayName: 'Use Python 3.x'
-      inputs:
-        versionSpec: '3.x' # Choose the appropriate Python version supported by your requirements
 
     - script: 'python -m pip install -r requirements.txt'
       workingDirectory: $(workingDirectory)
