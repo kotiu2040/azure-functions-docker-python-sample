@@ -68,7 +68,7 @@ stages:
             - task: AzureFunctionApp@1
               displayName: 'Azure functions app deploy'
               inputs:
-                azureSubscription: '$(AZURE_SERVICE_PRINCIPAL)'
+                azureSubscription: 'Terraform'
                 appType: 'functionAppLinux'
                 appName: '$(functionAppName)'
                 package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
