@@ -68,7 +68,7 @@ stages:
             - task: AzureFunctionApp@1
               displayName: 'Azure functions app deploy'
               inputs:
-                azureSubscription: 'Terraform'
+                azureSubscription: 'Koti_Paid (b321893b-78f2-4e98-b106-8c4a140e2f83)'
                 appType: 'functionAppLinux'
                 appName: '$(functionAppName)'
                 package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
